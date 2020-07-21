@@ -14,5 +14,7 @@ Run with:
 docker run --rm \
   -v /path/to/local.epub:/ebook/file.epub \
   -v /path/to/output:/ebook/output \
+  -e UID=`id -u` \
+  -e GID=`id -g` \
   openbookpublishers/ace-docker
 ```

@@ -7,4 +7,5 @@ RUN rm -rf /var/cache/apt/*
 
 RUN npm install -g @daisy/ace --unsafe-perm=true --allow-root
 
-CMD ace --outdir ./output/ file.epub
+CMD ace --outdir ./output/ file.epub && \
+    chown -R $UID:$GID ./output/
